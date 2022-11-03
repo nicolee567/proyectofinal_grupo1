@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
         transform.Rotate(new Vector3(0f, Input.GetAxis("Horizontal") * 50f, 0f) * Time.deltaTime);
         transform.Rotate(new Vector3(Input.GetAxis("Vertical") * -50f, 0f, 0f) * Time.deltaTime);
 
-        transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
+        ///transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
         //Movimiento del tiburon hacia adelante
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
